@@ -52,7 +52,10 @@ public class SeckillController {
         if (seckill == null) {
             return "forward:/seckill/list";
         }
-
+        long startTime = seckill.getStartTime().getTime();
+        long endTime = seckill.getEndTime().getTime();
+        model.addAttribute("startTime",startTime);
+        model.addAttribute("endTime",endTime);
         model.addAttribute("seckill", seckill);
         return "detail";
     }

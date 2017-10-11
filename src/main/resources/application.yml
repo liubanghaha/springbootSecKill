@@ -25,6 +25,8 @@ spring:
 #        max-request-size: 100MB
 #        enabled: true
     # 指定静态资源的路径
+    mvc:
+          static-path-pattern: /static/**
     resources:
         static-locations: classpath:/static/**,classpath:/templates/**
 

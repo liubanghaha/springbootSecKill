@@ -71,7 +71,7 @@ public class SeckillServiceImpl implements SeckillService {
     public Exposer exportSeckillUrl(String seckillId) {
         // 优化点：缓存优化：超时的基础上维护一致性
         // 1.访问redis
-        Seckill seckill = new Seckill();//redisDao.getSeckill(seckillId);
+        Seckill seckill = null;//redisDao.getSeckill(seckillId);
         if (seckill == null) {
             // 2.访问数据库
             seckill = seckillDao.queryById(seckillId);
