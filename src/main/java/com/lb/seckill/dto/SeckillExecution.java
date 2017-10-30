@@ -3,6 +3,7 @@ package com.lb.seckill.dto;
 
 import com.lb.seckill.entity.SuccessKilled;
 import com.lb.seckill.enums.SeckillStateEnum;
+import lombok.Data;
 
 /**
  * 封装秒杀执行后结果
@@ -10,6 +11,7 @@ import com.lb.seckill.enums.SeckillStateEnum;
  * @author lb
  * @create 2017-03-07
  */
+@Data
 public class SeckillExecution {
 
     private String seckillId;
@@ -36,42 +38,5 @@ public class SeckillExecution {
         this.stateInfo = stateEnum.getStateInfo();
     }
 
-    public String getSeckillId() {
-        return seckillId;
-    }
-
-    public void setSeckillId(String seckillId) {
-        this.seckillId = seckillId;
-    }
-
-    public int getState() {
-        return state;
-    }
-
-    public void setState(int state) {
-        this.state = state;
-    }
-
-    public String getStateInfo() {
-        return stateInfo;
-    }
-
-    public void setStateInfo(String stateInfo) {
-        this.stateInfo = stateInfo;
-    }
-
-    public SuccessKilled getSuccessKilled() {
-        return successKilled;
-    }
-
-    public void setSuccessKilled(SuccessKilled successKilled) {
-        this.successKilled = successKilled;
-    }
-
-    @Override
-    public String toString() {
-        return "SeckillExecution [seckillId=" + seckillId + ", state=" + state + ", stateInfo=" + stateInfo
-                + ", successKilled=" + successKilled + "]";
-    }
 
 }
