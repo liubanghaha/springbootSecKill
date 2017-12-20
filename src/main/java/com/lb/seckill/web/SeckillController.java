@@ -54,8 +54,8 @@ public class SeckillController {
         }
         long startTime = seckill.getStartTime().getTime();
         long endTime = seckill.getEndTime().getTime();
-        model.addAttribute("startTime",startTime);
-        model.addAttribute("endTime",endTime);
+        model.addAttribute("startTime", startTime);
+        model.addAttribute("endTime", endTime);
         model.addAttribute("seckill", seckill);
         return "detail";
     }
